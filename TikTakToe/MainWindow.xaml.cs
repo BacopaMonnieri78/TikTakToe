@@ -24,9 +24,13 @@ namespace TikTakToe
         {
             InitializeComponent();
         }
+        GameLogic GameLogic = new GameLogic();
         private void PlayClickSpace (object sender, RoutedEventArgs e)
         {
-
+            var Space = (Button)sender;
+            if (!String.IsNullOrWhiteSpace(Space.Content?.ToString())) return;
+            Space.Content = GameLogic.CurrentPlayer;
+            GameLogic.SetNextPlayer();
         }
         private void BtnNewButton(object sender, RoutedEventArgs e)
         {
