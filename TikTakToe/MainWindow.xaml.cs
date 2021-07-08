@@ -24,5 +24,13 @@ namespace TikTakToe
         {
             InitializeComponent();
         }
+        private void PlayClickSpace (object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void BtnNewButton(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
